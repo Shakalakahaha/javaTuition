@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ass2 {
+public class ass21 {
 
     private class Car {
         private String model;
@@ -20,7 +20,7 @@ public class ass2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ass2 assignment = new ass2();
+        ass21 assignment = new ass21();
 
         Car car1 = assignment.getCarDetails(scanner);
         Car car2 = assignment.getCarDetails(scanner);
@@ -28,6 +28,13 @@ public class ass2 {
 
         double averagePrice = (car1.getPrice() + car2.getPrice() + car3.getPrice()) / 3;
         System.out.println("The average price of the cars is: " + averagePrice);
+        if (averagePrice > 100000) {
+            System.out.println("The cars are expensive");
+        } else if (averagePrice > 50000 && averagePrice < 99999) {
+            System.out.println("The cars are normal price");
+        } else if (averagePrice < 49999) {
+            System.out.println("The cars are cheap");
+        }
     }
 
     private Car getCarDetails(Scanner scanner) {
