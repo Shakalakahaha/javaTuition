@@ -3,6 +3,7 @@ public class ass9 {
 
     public static void main(String[] args) {
         Scanner scan=new Scanner (System.in);
+        System.out.println("");
         System.out.println("Enter option: ");
         int option=scan.nextInt();
 
